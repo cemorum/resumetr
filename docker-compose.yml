@@ -1,0 +1,40 @@
+version: '1.0'
+networks:
+  rezumilla:
+    driver: bridge
+
+services:
+  bot:
+    container_name: bot
+    build:
+      dockerfile: ./bot/dockerfile
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - rezumilla
+    depends_on:
+      - db
+    restart: "on-failure"
+
+  web:
+    container_name: bot-web
+    build:
+      dockerfile: ./web/dockerfile
+    ports:
+      - "3000:80"
+    restart: "on-failure"
+
+  db:
+    container_name: bot-db
+    image: postgres
+    expose:
+      - "5432"
+    volumes:
+      - "./dump.sql:/docker-entrypoint-initdb.d/database.sql"
+    environment:
+      POSTGRES_USER: "rezumilla"
+      POSTGRES_PASSWORD: "6y51HsXrNcx"
+      POSTGRES_DB: "rezumilla"
+    networks: 
+     - rezumilla
+    restart: "on-failure"

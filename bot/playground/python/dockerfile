@@ -1,0 +1,28 @@
+# FROM python:3.10.11-alpine3.17
+#
+# RUN addgroup -S user && adduser -S user -G user
+# USER user
+#
+# RUN mkdir /home/user/playground
+# WORKDIR /home/user/playground
+#
+# COPY playground.py .
+
+
+FROM python:3.10.11-alpine3.17
+
+# Install golang
+COPY --from=golang:1.19.8-alpine3.17 /usr/local/go/ /usr/local/go/
+ 
+ENV PATH="/usr/local/go/bin:${PATH}"
+
+# setup env
+RUN addgroup -S user && adduser -S user -G user
+USER user
+
+RUN mkdir /home/user/playground
+WORKDIR /home/user/playground
+
+COPY playground.go .
+RUN go build playground.go
+RUN chmod 555 playground

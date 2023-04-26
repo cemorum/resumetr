@@ -1,0 +1,291 @@
+{
+	"name": "Frontend разработчик middle",
+	"questions": [{
+			"question": "Что делает браузер при запросе страницы?",
+			"options": [
+				"запрашивает ресурсы, указанные в документе",
+				"парсит документ",
+				"исполняет JS",
+				"строит DOM",
+				"рендерит страницу"
+			],
+			"answer": ["запрашивает ресурсы, указанные в документе",
+						"парсит документ",
+						"исполняет JS",
+						"строит DOM",
+						"рендерит страницу"]
+            
+		},
+		{
+			"question": "Какие из нижеприведенных элементов являются блочными?",
+			"options": [
+				"article",
+				"div",
+				"form",
+				"li",
+				"a",
+				"img",
+				"span",
+				"button"
+			],
+			"answer": ["article", "div", "form", "li"]
+			
+
+
+		},
+		{
+			"question": "Каких html элементов нет в спецификации html5?",
+			"options": [
+				"src",
+				"addr",
+				"window",
+				"document",
+				"menu",
+				"portal",
+				"noscript"
+			],
+			"answer": ["src", "addr", "window", "document"]
+
+
+		},
+		{
+			"question": "Выберите некорректные css селекторы.",
+			"options": [
+				"div:hidden",
+				"div - p",
+				":nth-of-type(div)",
+				"[data-test=\"test\"]",
+				"[data-test|=\"test\"]",
+				"div > p",
+				"*"
+			],
+			"answer": ["div:hidden", "div - p", ":nth-of-type(div)"]
+
+
+		},
+		{
+			"question": "Какие метрики есть в Chrome?",
+			"options": [
+				"FCP",
+				"TTI",
+				"TBT",
+				"LCP",
+				"LCS",
+				"PID"
+			],
+			"answer": ["FCP", "TTI", "TBT", "LCP", "LCS"]
+
+
+		},
+		{
+			"question": "Выберите корректные способы создания объекта в JS.",
+			"options": [
+				"new Object({})",
+				"{}",
+				"new (function () {})()",
+				"Object.create(Object.prototype, {})",
+				"Object.fromEntries([])",
+				"new {}",
+				"(function () { return Object; })()",
+				"new Object.prototype({})"
+			],
+			"answer": ["new Object({})",
+			 "{}", 
+			 "new (function () {})()",
+				"Object.create(Object.prototype, {})",
+				"Object.fromEntries([])"]
+		},
+		{
+			"question": "Выберите методы по работе с асинхронным кодом в JS.",
+			"options": [
+				"Promise",
+				"async/await",
+				"генераторы",
+				"мьютексы",
+				"короутины",
+				"замыкания",
+				"каррирования"
+			],
+			"answer": ["Promise", "async/await", "генераторы"]
+		},
+		{
+			"question": "Через сколько секунд выведется сообщение 'MSG' в консоль: Promise.resolve(() => console.log('MSG')).then(msg => setTimeout(() => (console.error('Error'), msg()), msg.toString().length * 1000))?\n",
+			"options": [
+				"выведется ошибка",
+				"24 секунды",
+				"мгновенно",
+				"сообщение не выведется",
+				"3 секунды",
+				"8 секунд",
+				"1 секунда"
+			],
+			"answer": ["выведется ошибка", "24 секунды"]
+		},
+		{
+			"question": "Какая переменная будет использоваться при выводе в консоль: var a = 5; { var a = 5; console.log(a); }",
+			"options": [
+				"глобальная",
+				"локальная",
+				"выведет ошибку",
+				"ничего не выведется"
+			],
+			"answer": ["глобальная"]
+		},
+		{
+			"question": "Какими способами можно получить DOM объект в JS?",
+			"options": [
+				"document.getElementById()",
+				"document.getElementsByClassName()",
+				"document.getElementsByName()",
+				"document.querySelectorAll()",
+				"document.getElementsByTag()",
+				"document.getElementsBySelection()",
+				"document.querySelectr()"
+			],
+			"answer": ["document.getElementById()",
+				"document.getElementsByClassName()",
+				"document.getElementsByName()",
+				"document.querySelectorAll()"
+			]
+		},
+		{
+			"question": "Как проверить является ли объект obj из iframe JS массивом?",
+			"options": [
+				"Array.isArray(obj)",
+				"obj instanceof Array",
+				"obj.length",
+				"typeof obj === 'array'",
+				"obj.isArray()"
+			],
+			"answer": ["Array.isArray(obj)"]
+		},
+		{
+			"question": "Необходимо вытягивать из объекта собственное свойство по строке вида 'prop1.prop2.prop3'. Какие методы ты бы использовал для решения этой задачи?\n",
+			"options": [
+				"reduce",
+				"split",
+				"hasOwnProperty",
+				"slice",
+				"keys",
+				"values",
+				"concat",
+				"filter",
+				"find"
+			],
+			"answer": ["reduce", "split", "hasOwnProperty"]
+		},
+		{
+			"question": "Какие существуют способы регистрации функции в очередь микрозадач?",
+			"options": [
+				"Promise.then",
+				"queueMicrotask",
+				"Promise.resolve",
+				"Promise.reject",
+				"setTimeout",
+				"setInterval",
+				"requestIdleCallback",
+				"requestAnimationFrame"
+			],
+			"answer": ["Promise.then",
+				"queueMicrotask"]
+		},
+		{
+			"question": "Какие есть способы получить значение свойства объекта по ключу?",
+			"options": [
+				"[]",
+				".",
+				"destruct",
+				"spread",
+				"?",
+				">>>",
+				"get"
+			],
+			"answer": ["[]", ".", "destruct"]
+			
+		},
+		{
+			"question": "В каких случаях передача осуществляется по значению?",
+			"options": [
+				"let a = 5; fn(a);",
+				"let a = '5'; fn(a);",
+				"let a = { a: 5 }; fn(a.a);",
+				"let { a } = { a: 5 }; fn(a);",
+				"let [ a ] = [ 5 ]; fn(a);",
+				"let a = Object(5); fn(a);",
+				"let a = { a: 5 }; fn(a);",
+				"let a = [ 5 ]; fn(a);"
+			],
+			"answer": ["let a = 5; fn(a);",
+				"let a = '5'; fn(a);",
+				"let a = { a: 5 }; fn(a.a);",
+				"let { a } = { a: 5 }; fn(a);",
+				"let [ a ] = [ 5 ]; fn(a);"
+			]
+			
+		},
+		{
+			"question": "Какие алгоритмы использует Ангуляр?",
+			"options": [
+				"инкрементальный дом",
+				"shadow дом",
+				"виртуальный дом",
+				"виртуальная машина"
+			],
+			"answer": ["инкрементальный дом"]
+			
+		},
+		{
+			"question": "Какие механизмы есть в Ангуляре из коробки?",
+			"options": [
+				"IoC контейнеры",
+				"реактивность",
+				"CD",
+				"централизованное управление состоянием",
+				"хуки"
+			],
+			"answer": ["IoC контейнеры", "реактивность", "CD"]
+			
+		},
+		{
+			"question": "Какие механизмы есть в Реакте из коробки?",
+			"options": [
+				"хуки",
+				"CD",
+				"IoC контейнеры",
+				"реактивность",
+				"централизованное управление состоянием"
+			],
+			"answer": ["хуки", "CD"]
+			
+		},
+		{
+			"question": "Какие существуют методы оптимизации Ангуляр приложений (по любой из метрик)?",
+			"options": [
+				"SSR",
+				"code splitting",
+				"уменьшение количества ререндеров",
+				"мемоизация",
+				"глобальное хранилище",
+				"Renderer пакет",
+				"директивы",
+				"реактивность"
+			],
+			"answer": ["SSR", "code splitting",
+				"уменьшение количества ререндеров",
+				"мемоизация"]
+			
+		},
+		{
+			"question": "Какой результат операции map(a => a**2) на '---3-^2---1-|'?",
+			"options": [
+				"4, 1",
+				"9, 4, 1",
+				"9, 8, 1",
+				"1, 8, 9",
+				"ошибка"
+			],
+			"answer": ["4, 1"]
+			
+		}
+	]
+}

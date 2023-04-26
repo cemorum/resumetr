@@ -1,0 +1,33 @@
+{
+	"name": "Kotlin разработчик",
+	"language": "python",
+	"questions": [
+		{
+			"question": "Что из этого в настоящее время не поддерживается в Kotlin?",
+			"type": "question",
+			"options": [
+				"jvm",
+				"javascript",
+				"llvm",
+				".NET CLR"
+			],
+			"answer": [
+				".NET CLR"
+			]
+		},
+		{
+			"question": "Напишите функцию для возведения в n степень",
+			"type": "code",
+			"answer": [
+				"4",
+				"8",
+				"16"
+			],
+			"options": [
+				"2\n2",
+				"2\n3",
+				"2\n4"
+			]
+		}
+	]
+}
